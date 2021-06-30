@@ -23,10 +23,7 @@ export default class ContactList extends Component {
   };
 
   render() {
-    const baseURL = "http://localhost:8000/api";
-    const headers = {
-      "Content-type": "application/json",
-    };
+    
 
     return (
       <div>
@@ -49,8 +46,6 @@ export default class ContactList extends Component {
                     className="card-img-top"
                     alt="no pic"
                   ></img>
-                  const id = {item.id}
-                  console.log(id)
                   <div className="card-body  ">
                     <h2 className="card-title text-capitalize">
                       {item.first_name} - {item.last_name}
