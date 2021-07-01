@@ -13,21 +13,23 @@ export default class ContactList extends Component {
 
   componentDidMount() {
     this.refreshList();
-  }
 
+    setInterval(() => {
+      this.refreshList();
+    }, 100000);
+  }
   refreshList = () => {
     axios
       .get("/api/contact/")
       .then((res) => this.setState({ contactlist: res.data }))
+
       .catch((err) => console.log(err));
   };
 
   render() {
-    
-
     return (
       <div>
-        <div className="container bg-dark ">
+        <div className="container justify-content-center bg-dark ">
           <br />
           <br />
           <h1 className="text-white mb-5 text-center">Contact List</h1>
@@ -35,9 +37,9 @@ export default class ContactList extends Component {
             <br />
             <br />
             {this.state.contactlist.map((item) => (
-              <div  className="col-3 text-center">
+              <div className="col justify-content-center  text-center">
                 <div
-                 className="card mt-3 text-center m-3"
+                  className="card mt-3 text-center m-3"
                   style={{ width: "22rem" }}
                 >
                   <img
@@ -48,14 +50,24 @@ export default class ContactList extends Component {
                   ></img>
                   <div className="card-body  ">
                     <h2 className="card-title text-capitalize">
-                      {item.first_name} - {item.last_name}
+                      {item.first_name} - {item.last_name} -{item.pk}
                     </h2>
                     <h5 className="card-text">Number: {item.number} </h5>
-                    <button className="btn p-3 m-3 btn-primary">Edit</button>
                     <button
-                      onClick={(id) => {
+                      className="btn p-3 m-3 btn-primary"
+                      onClick={() => {
                         axios
-                          .get(`/delete/${id}`)
+                          .get(`api/contact/${item.id}`)
+                          .then((res) => console.log(res.data))
+                          .catch((err) => console.log(err));
+                      }}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      onClick={() => {
+                        axios
+                          .get(`/delete/${item.id}`)
                           .then((res) => console.log("done"))
                           .catch((err) => console.log(err));
                       }}

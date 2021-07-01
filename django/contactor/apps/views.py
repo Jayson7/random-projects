@@ -30,7 +30,7 @@ def contactdetail(request, pk):
 
 @api_view(['GET','POST', 'PUT', 'DELETE'])
 @parser_classes([JSONParser])
-def contactCreate(request, format=None):
+def contactCreate(request):
     # contact = Contact.objects.all()
     serializer = ContactSerializer(data = request.data)
     

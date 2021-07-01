@@ -7,6 +7,7 @@ class Contact(models.Model):
     last_name = models.CharField(max_length=200)
     picture = models.ImageField(upload_to="Images")
     number = models.PositiveBigIntegerField()
+    id = models.AutoField(primary_key=True)
 
     def __str__(self):
         return self.first_name
