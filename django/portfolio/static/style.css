@@ -1,0 +1,13 @@
+body {
+    font-family: "Ubuntu", sans-serif;
+    background: #000;
+}
+
+.navbar {
+    font-weight: 700;
+}
+
+.head {
+    font-weight: 900;
+    color: aliceblue;
+}
