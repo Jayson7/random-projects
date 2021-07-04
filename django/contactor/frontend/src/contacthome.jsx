@@ -40,11 +40,16 @@ export default class ContactList extends Component {
               <div className="col justify-content-center  text-center">
                 <div
                   className="card mt-3 text-center m-3"
-                  style={{ width: "22rem" }}
+                  style={{ width: "18rem" }}
                 >
                   <img
                     src={item.picture}
-                    style={{ width: "22rem", height: "22rem" }}
+                    style={{
+                      width: "18rem",
+                      height: "13rem",
+                      objectFit: "contain",
+                      textAlign: "center",
+                    }}
                     className="card-img-top"
                     alt="no pic"
                   ></img>

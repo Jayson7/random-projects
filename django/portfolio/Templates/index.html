@@ -16,7 +16,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jayson's Projects</title>
+    <title>Jayson's 👨‍💻 Projects</title>
     <!-- css -->
     <link rel="stylesheet" href="{% static 'style.css' %}" />
     <!-- ends -->
@@ -36,25 +36,12 @@
                     <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a
             >
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="#">WEB APPS</a>
+            <a class="nav-link" href="#" tabindex="-1">CONTACT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">PROGRAMMING</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">CYBER SECURITY</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">WEB DESIGN</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1">CONTACT</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">SEARCH</a>
+                    <a class="nav-link" href="{% url 'search' %}">SEARCH</a>
                 </li>
             </ul>
         </div>
@@ -62,29 +49,44 @@
 </header>
 
 <body>
+    <!-- intro -->
+    <br /><br />
+    <div class="container p-4 text-center text-white" style="background-color: #000">
+        <br />
+        <h1 class="mt-5">Hello 👋,</h1>
+        <h3 class="p-2 m-2">I'm Jayson 👨‍💻</h3>
+        <h6 class="px-4 m-3 mb-4">
+            A Fullstack Developer and a Programmer, Designer who major's in both Python and Javascript. this web app contains some of my projects of which i've done over the years. feel free to reach out for any question.
+        </h6>
+        <br />
+        <a class="btn btn-success" href="https://jaysons.netlify.app">Portfolio</a
+      >
+    </div>
+    <!-- ends -->
+
     <br /><br /><br />
     <br />
-    <div class="container mt-5">
-        {% for cat in categories %}
-        <h2 class="head text-center">{{cat.name}}</h2>
-        <hr />
-        <div class="row row-cols-1 row-cols-md-3">
-            {% for p in cat.app_set.all %}
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="{{ p.picture.url }}" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title text-center">{{ p.project_name }}</h5>
-                        <p class="card-text">{{ p.about }}</p>
-                        <h6 class="card-text">{{ p.category }}</h6>
-                        <a class="btn btn-success mr-3" href="{{ p.link }}">Website</a>
-                        <a class="btn btn-success" href="{{ p.github }}">Github</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% endfor %}
+    <div class="container mt-3">
+      {% for cat in categories %}
+      <h2 class="head text-center">{{cat.name}}</h2>
+      <hr />
+      <div class="row row-cols-1 row-cols-md-3">
+        {% for p in cat.app_set.all %}
+        <div class="col mb-4">
+          <div class="card">
+            <img src="{{ p.picture.url }}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title text-center">{{ p.project_name }}</h5>
+              <p class="card-text">{{ p.about }}</p>
+              <h6 class="card-text">{{ p.category }}</h6>
+              <a class="btn btn-success mr-3" href="{{ p.link }}">Website</a>
+        <a class="btn btn-success" href="{{ p.github }}">Github</a>
+    </div>
+    </div>
+    </div>
+    {% endfor %}
+    </div>
+    {% endfor %}
     </div>
 </body>
 

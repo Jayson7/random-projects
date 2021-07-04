@@ -389,6 +389,7 @@ class SearchView(TemplateView):
         results = Product.objects.filter(
             Q(title__icontains=kw) | Q(description__icontains=kw) | Q(return_policy__icontains=kw))
         print(results)
+
         context["results"] = results
         return context
 
