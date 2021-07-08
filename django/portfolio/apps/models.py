@@ -28,7 +28,7 @@ class App(models.Model):
     project_name = models.CharField(max_length=200)
     link = models.URLField()
     about = models.CharField(max_length=500)
-    picture = models.ImageField(upload_to="images")
+    picture = models.ImageField()
     github = models.URLField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
