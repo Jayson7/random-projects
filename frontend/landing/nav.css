@@ -1,0 +1,56 @@
+/* navbar */
+
+.header {
+    background-color: #542e71;
+    width: 15vw;
+    height: 100vh;
+    position: fixed;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    display: block;
+    line-height: 15vh;
+    text-align: center;
+    margin-top: 20vh;
+    /* background-color: aliceblue; */
+    width: 100%;
+    height: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #ddd8b8;
+}
+
+
+/* ends */
+
+
+/* togglers */
+
+.toggles {
+    position: absolute;
+    right: 2vw;
+    top: 0;
+    background-color: aqua;
+}
+
+.toggles i {
+    font-size: 2rem;
+    font-weight: 700;
+    position: absolute;
+    right: 1rem;
+}
+
+
+/* ends */
