@@ -2,9 +2,12 @@
 
 .header {
     background-color: #542e71;
-    width: 15vw;
+    width: 3.5rem;
     height: 100vh;
     position: fixed;
+    /* transition: 0.2s width ease-in-out; */
+    position: fixed;
+    z-index: 100;
 }
 
 nav {
@@ -14,9 +17,9 @@ nav {
 
 ul {
     display: block;
-    line-height: 15vh;
+    line-height: 10vh;
     text-align: center;
-    margin-top: 20vh;
+    margin-top: 15vh;
     /* background-color: aliceblue; */
     width: 100%;
     height: 100%;
@@ -30,10 +33,56 @@ li a {
     text-decoration: none;
     font-weight: 600;
     color: #ddd8b8;
+    font-size: 1.3rem;
+}
+
+li i {
+    font-size: 1.5rem;
+}
+
+#span {
+    display: none;
+    transition: 0.1s ease-in;
+    transition-property: display;
 }
 
 
 /* ends */
+
+#check {
+    display: none;
+}
+
+li:hover,
+li i:hover,
+li span:hover {
+    background-color: #517dad;
+}
+
+
+/* ////////////////////////////////////////// */
+
+
+/* checked state */
+
+#check:checked~.header {
+    width: 20vw;
+}
+
+#check:checked~.header #span {
+    display: inline;
+    margin-left: 5px;
+}
+
+#check:checked~.header ul {
+    line-height: 15vh;
+}
+
+@media screen and (max-width: 900px) {
+    #check:checked~.header {
+        width: 55vw;
+    }
+}
 
 
 /* togglers */
@@ -41,16 +90,20 @@ li a {
 .toggles {
     position: absolute;
     right: 2vw;
-    top: 0;
-    background-color: aqua;
+    top: 1.5rem;
 }
 
 .toggles i {
     font-size: 2rem;
     font-weight: 700;
-    position: absolute;
     right: 1rem;
+    z-index: 100;
+    cursor: grab;
+    color: #ddd8b8;
 }
 
 
 /* ends */
+
+
+/* ///////////////////////////////////////////////// */

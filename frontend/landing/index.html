@@ -22,53 +22,64 @@
     <link rel="stylesheet" href="nav.css" />
     <link rel="stylesheet" href="lander.css" />
 </head>
+<input type="checkbox" id="check" />
 
 <body>
-    <div class="toggles">
-        <i class="fa fa-bars j" aria-hidden="true"></i>
-        <i class="fa fa-times" aria-hidden="true"></i>
-    </div>
+    <label for="check" class="toggles">
+      <i class="fa fa-bars j" aria-hidden="true"></i>
+    </label>
 
     <div class="header">
-        <nav class="nav-deactive">
-            <ul class="ul-deactive">
+        <nav>
+            <ul>
                 <li>
-                    <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    <a href="#"><i class="fa fa-home" aria-hidden="true"> </i
+              ><span id="span"> Home </span></a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-road" aria-hidden="true"></i>
+              <span id="span"> Routes</span></a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-location-arrow" aria-hidden="true"></i>
+              <span id="span"> Location</span>
+            </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fa fa-road" aria-hidden="true"></i> Routes</a>
+                        <i class="fas fa-microphone-slash" aria-hidden="true"></i>
+                        <span id="span"> Contact </span></a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fa fa-location-arrow" aria-hidden="true"></i> Location
-                    </a>
-                </li>
-                <li>
-                    <a href="#"> <i class="fas fa-microphone-slash"></i> Contact</a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-align-center" aria-hidden="true"></i> Agent</a>
+                        <i class="fa fa-align-center" aria-hidden="true"></i>
+                        <span id="span"> Agent </span></a>
                 </li>
             </ul>
         </nav>
     </div>
-    <!-- 
-    <div class="sec1s">
-        <div class="sec1">
-            <div class="mini-sec1"></div>
 
-            <div class="mini-sec2"></div>
+    <div class="sec1s">
+        <div class="box">
+            <h1>We are the <span> hottest</span> Vacation planner</h1>
+            <h6>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos facilis ratione ipsa, fugit provident.
+            </h6>
+            <button class="btn">Bookings</button>
         </div>
+
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#0099ff"
+          fill="#542e71"
           fill-opacity="1"
           d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
       </svg>
-    </div> -->
+    </div>
 </body>
 <script src="nav.js"></script>
 
