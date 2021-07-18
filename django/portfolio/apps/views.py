@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import App, AppFilter, Category
 from django.views.generic import TemplateView
 import django_filters
+
 # Create your views here.
 
 

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.container {
+    font-family: "Ubuntu";
+}
+
+div h1 {
+    font-weight: 900;
+    font-family: "Ubuntu";
+}
+
+.btn {
+    font-weight: 900;
+    font-family: "Ubuntu";
+}
+
+div h3 {
+    font-weight: 900;
+    font-family: "Ubuntu";
+}
+
+div p {
+    font-weight: 900;
+    font-family: "Ubuntu";
+}
+
+nav {
+    font-family: "Ubuntu";
+    font-weight: 900;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* carousel */
+
+#owl-demo .item {
+    width: 320px;
+    height: 300px;
+    border-radius: 9px;
+}
+
+.a {
+    background: url("../images/123.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.b {
+    background: url("../images/345.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.c {
+    background: url("../images/6366.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.d {
+    background: url("../images/329583.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.e {
+    background: url("../images/329585.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.f {
+    background: url("../images/329598.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.g {
+    background: url("../images/adekunle.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h {
+    background: url("../images/davido.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.i {
+    background: url("../images/olamide.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.j {
+    background: url("../images/wiz.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.k {
+    background: url("../images/zlatan.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.l {
+    background: url("../images/home4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

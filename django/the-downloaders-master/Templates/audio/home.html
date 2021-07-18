@@ -1,0 +1,169 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <meta name="copyright" content="downloaders is a trademark of Jayson">
+    <meta name="robots" content="index,follow">
+    <meta name="D.C.title" content="Music, videos, audio, pdf, movies fownloads for free">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <link rel="shortcut icon" href="{% static 'images/2.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Downloaders - Audio </title>
+
+
+    <meta name="keywords" content="Download, videos, audio, mp3, free videos, free audio, free mp3 files, free pdf, latest movies , latest pdf, latest audio files">
+
+    <meta name="description" content="download free latest videos, movies, music, pdf's all for free on downloaders servers.">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta Author="Jayson">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top  navbar-light bg-light">
+            <a class="navbar-brand" href="{% url 'mainhome' %}">
+                <img src="{% static 'images/1.png' %}" width="190" height="40" alt="">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav offset-xl-3 mr-md-5 offset-lg-2">
+                    <li class="nav-item pr-4 ">
+                        <a class="nav-link" href="{% url 'mainhome' %}">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item  pr-4">
+                        <a class="nav-link" href=" {% url 'pdf' %} ">PDF</a>
+                    </li>
+
+                    <li class="nav-item pr-4">
+                        <a class="nav-link " href="{% url 'video' %}">VIDEOS</a>
+                    </li>
+                    <li class="nav-item pr-4">
+                        <a class="nav-link " href="{% url 'contact' %}">CONTACT</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline offset-lg-2 offset-md-0 offset-xl-3 my-2 my-lg-0"> <button class="btn btn-outline-success my-2 my-sm-0"><a class="text-decoration-none" href="{% url 'search_audio' %}">Search </a> </button>
+                </form>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="jumbotron bg-dark">
+            <section class="py-5 mt-4  bg-dark text-center text-white container">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 text-white col-md-8 mx-auto">
+                        <h1 class="fw-light">Downloaders</h1>
+                        <p class="lead text-white">Your ultimate home of entertainments, videos, songs, podcasts, pdfs, name it. download all for free and enjoy</p>
+                        <p>
+                            <a href="#" class="btn btn-primary my-2">Recently uploaded</a>
+                            <a href="#" class="btn btn-secondary my-2">Popular Downloads</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    {% for i in object_list %}
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="{% static 'images/2.png' %}" alt="">
+                            <div class="card-header">
+                                <h1>{{i.Title}} </h1>
+                                <h5>By: {{i.Artist}}</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">{{i.Info}} </p>
+                                <p class="card-text">{{i.Album}} </p>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a class="text-decoration-none" download href=" {{i.File.url}}">Download </a></button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
+                                    </div>
+                                    <small class="text-muted pl-4">{{i.Date_uploaded}}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="text-muted bg-dark py-5">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a href="{% url 'audio' %}" class="bg-dark text-decoration-none text-white p-2">Back to top</a>
+            </p>
+            <p class="mb-1">Downloaders is a &copy; of <a href="twitter.com/Jay_b_jayson" class=" text-decoration-none ">Jayson </a></p>
+
+        </div>
+    </footer>
+
+
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+
+
+</body>
+
+</html>
